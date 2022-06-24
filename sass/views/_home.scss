@@ -1,0 +1,58 @@
+
+
+#tarjetas {display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .card {
+        gap: 0.2rem;
+        background-color: #C7EFCF;
+        flex-basis: 25%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 250px;
+        transition: transform .7s;
+        /*flex: 1 1 200px;  Respecto a contenedor padre  */ 
+
+        &:hover {transform: scale(1.1, 1.1)}  
+        
+        .pasos__titulo {color: #333745; font-size: 24px;
+            font-family: 'Libre Baskerville', serif;
+            margin: 5px}
+
+        .pasos__subtitulo {color: #E63462; font-size: 20px;
+            font-family: 'Libre Baskerville', serif;
+            margin: 5px}
+
+        .pasos__img {}
+    }
+
+}
+
+#offers__tit {border: 2px solid #333745;
+    font-size: 40;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 5px 0;
+    text-align: center;
+    background-image: linear-gradient(to bottom, yellow, red, yellow);
+    animation-name: shrink-me;
+    animation-duration: 5s;
+    animation-iteration-count: 10;
+    animation-delay: 3s;
+    /* transition: border 3s; */
+}
+
+
+#offers .card {
+    padding: 5px;
+    margin: 5px;
+    max-width: 30%;
+    flex: 1 1 clamp(300px, 30%, 400px);
+}
+
+.precio {
+    text-align: end;
+}
+
