@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="../css/translated.css">
     <title>Document</title>
 </head>
-<body>
+<body  class="container">
     <header>
         <!-- Menu Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-info">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-info">            <div class="container-fluid">
                 <!-- Logo de la marca-->
                 <a class="navbar-brand" href="../index.html"><img class="img-fluid" src="../imgs/multipremios.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,13 +39,33 @@
             </div>
         </nav>
     </header> 
-    <div id="contenedor">
-        <main>
-            <h1>Aqui como CANJEAR... pronto</h1>
 
-        </main>
+    <div id="contenedor">
+
+        <main>
+            <h1 class="mx-auto" style="width: 200px">Registrate</h1>
+            <form class="contacto" action="./pages/mensaje_enviado.html" method="get">
+                <div class="form-group mt-2">
+                    <label for="NomApel">Tu nombre y apellido:</label>
+                    <input class="form-control" type="text" id="NomApel" name="Usuario_NomApel">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="mail">Tu correo electrónico:</label>
+                    <input class="form-control" type="mail" id="mail" name="Usuario_mail">
+                    <small class="form-text text-muted">No compartiremos su correo con nadie.</small>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="clave">Tu contraseña:</label>
+                    <input class="form-control" type="password" id="pass" name="clave">
+                </div>
         
-        <footer>
+                <button class="btn btn-primary mb-2 mt-3" type="submit">Registrarme</button>
+            </form>
+
+            
+         </main>
+
+         <footer>
 
             <nav class="navbar navbar-expand-md navbar-light bg-light border-top border-info mt-5" >
                 <div class="container-fluid">

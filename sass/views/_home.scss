@@ -1,27 +1,23 @@
-
-
-#tarjetas {display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
+#tarjetas {
+    @include flex(row,flex-start, stretch, map-get($spacings,'xsmall') );
+    
     .card {
-        gap: 0.2rem;
-        background-color: #C7EFCF;
+        @include flex(column,flex-start, stretch, map-get($spacings,'xsmall')/2 );
+        background-color: $color-base;
         flex-basis: 25%;
         flex-grow: 1;
         flex-shrink: 1;
         min-width: 250px;
         transition: transform .7s;
-        /*flex: 1 1 200px;  Respecto a contenedor padre  */ 
 
         &:hover {transform: scale(1.1, 1.1)}  
         
-        .pasos__titulo {color: #333745; font-size: 24px;
-            font-family: 'Libre Baskerville', serif;
+        .pasos__titulo {color: $color-primary;  font-size: 24px;
+            font-family: $font-title;
             margin: 5px}
 
-        .pasos__subtitulo {color: #E63462; font-size: 20px;
-            font-family: 'Libre Baskerville', serif;
+        .pasos__subtitulo {color: $color-secondary; font-size: 20px;
+            font-family: $font-title;
             margin: 5px}
 
         .pasos__img {}
@@ -29,7 +25,7 @@
 
 }
 
-#offers__tit {border: 2px solid #333745;
+#offers__tit {border: 2px solid $color-primary;
     font-size: 40;
     box-sizing: border-box;
     align-items: center;
@@ -45,14 +41,24 @@
 }
 
 
-#offers .card {
-    padding: 5px;
-    margin: 5px;
-    max-width: 30%;
-    flex: 1 1 clamp(300px, 30%, 400px);
+#offers {
+    @include flex(row,flex-start, stretch, map-get($spacings,'xsmall') );
+
+    .card {
+        padding: 5px;
+        margin: 5px;
+        flex-basis: 25%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 280px;
+        max-width: 400px;
+
+        .precio {
+            text-align: end;
+        }
+    }
+
 }
 
-.precio {
-    text-align: end;
-}
+
 

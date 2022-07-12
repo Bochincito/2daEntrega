@@ -1,4 +1,32 @@
+@charset "UTF-8";
 /*  MISC */
+/* Colors  */
+/* Spacings - Espaciados */
+/* Creo clases utilitarias pad-xxx */
+.pad-large {
+  padding: 6rem; }
+
+.pad-medium {
+  padding: 3rem; }
+
+.pad-small {
+  padding: 2rem; }
+
+.pad-xsmall {
+  padding: 1rem; }
+
+/* Font Family */
+/* Font sizes */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box; }
+
+h1 {
+  color: #E63462;
+  margin: 2rem 0; }
+
 /*  MPARTIALS */
 .nav-item {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,31 +38,46 @@
     color: white;
     text-decoration: none; }
 
+.footerbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: self-start;
+  align-items: stretch;
+  gap: 1rem; }
+
+.footermenu {
+  list-style-type: none; }
+
 /*  VIEWS */
 #tarjetas {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 1rem; }
   #tarjetas .card {
-    gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
     background-color: #C7EFCF;
     flex-basis: 25%;
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 250px;
-    transition: transform .7s;
-    /*flex: 1 1 200px;  Respecto a contenedor padre  */ }
+    transition: transform .7s; }
     #tarjetas .card:hover {
       transform: scale(1.1, 1.1); }
     #tarjetas .card .pasos__titulo {
       color: #333745;
       font-size: 24px;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       margin: 5px; }
     #tarjetas .card .pasos__subtitulo {
       color: #E63462;
       font-size: 20px;
-      font-family: 'Libre Baskerville', serif;
+      font-family: "Libre Baskerville", serif;
       margin: 5px; }
 
 #offers__tit {
@@ -52,26 +95,42 @@
   animation-delay: 3s;
   /* transition: border 3s; */ }
 
-#offers .card {
-  padding: 5px;
-  margin: 5px;
-  max-width: 30%;
-  flex: 1 1 clamp(300px, 30%, 400px); }
-
-.precio {
-  text-align: end; }
+#offers {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem; }
+  #offers .card {
+    padding: 5px;
+    margin: 5px;
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 280px;
+    max-width: 400px; }
+    #offers .card .precio {
+      text-align: end; }
 
 /* -- Pagina Como */
 .callout-info {
-  padding: 20px;
-  margin: 20px 20px;
+  margin: 2rem;
   border: 1px solid #eee;
   border-left-width: 5px;
   border-radius: 3px;
-  border-left-color: #5bc0de h4;
-    border-left-color-margin-top: 0;
-    border-left-color-margin-bottom: 5px;
-    border-left-color-color: #5bc0de; }
+  border-left-color: #5bc0de; }
+  .callout-info h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #5bc0de; }
+
+.catalogo {
+  width: 400px;
+  height: 100px;
+  background-color: #C7EFCF;
+  border-radius: 25%;
+  text-align: center;
+  margin: 0.5rem; }
 
 /* -- Pagina Comercios */
 .comercios .card {
@@ -87,10 +146,26 @@
   width: 60%;
   align-self: center; }
 
-h1 {
-  color: #E63462;
-  margin: 1rem 0px; }
+.contacto {
+  margin: 20px auto;
+  width: 400px;
+  /* Esquema del formulario */
+  padding: 1rem;
+  border: 1px solid #C7EFCF;
+  border-radius: 1em;
+  font-family: "Verdana, Geneva, Tahoma", sans-serif; }
+  .contacto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .contacto input, .contacto .contacto textarea {
+    font: 12px Verdana;
+    border: 1px solid #999; }
+  .contacto textarea {
+    width: 350px;
+    height: 120px; }
 
+/* Animación del #offers__tit  */
 @keyframes shrink-me {
   0% {
     margin: 0 1rem;

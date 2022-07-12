@@ -10,7 +10,7 @@
         max-width:33%;
     }
     .logo_comercio {
-        margin: 1rem;
+        margin: map-get($spacings, 'xsmall');
         width: 60%;
         align-self: center;
     }
