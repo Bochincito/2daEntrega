@@ -126,9 +126,9 @@ h1 {
 
 .catalogo {
   width: 400px;
-  height: 100px;
+  height: 60px;
   background-color: #C7EFCF;
-  border-radius: 25%;
+  border-radius: 5%;
   text-align: center;
   margin: 0.5rem; }
 
