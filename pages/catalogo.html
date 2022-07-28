@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css"> 
     <link rel="stylesheet" href="../css/translated.css">
-    <title>Document</title>
+    <title>Multipremios, Catálogo de premios.</title>
+    <meta name="description" content="Multipremios, Catalogo los premios disponibles para canjear por tus puntos.">
+    <meta name="keywords" content="Premios, puntos, compras">
 </head>
 <body  class="container">
     <header>
@@ -26,13 +28,13 @@
                             <a class="nav-link "  href="como.html">Como</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                            <a class="nav-link active" aria-current="page" href="catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="comercios.html">Comercios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="canjear.html">Canjear</a>
+                            <a class="nav-link" href="canjear.html">Canjear</a>
                         </li>
                     </ul>
                 </div>
@@ -46,16 +48,128 @@
             <h1 class="catalogo mx-auto">CATALOGO</h1>
 
             <div class="alert alert-info alert-dismissible ms-5 me-5">
-                <h4 class="alert-heading">Ups! Nos sorprendiste trabajando.</h4>
-                <p><strong>Esta página aún esta en desarrollo.</strong> Esperamos terminarla apenas Pablo nos de un respiro con tantas entregas!
-                Vuelve a visitarnos pronto, quizas ya haya novedades. Gracias por tu paciencia!</p>
+                <h4 class="alert-heading">Es invierno, y tus puntos valen doble!.</h4>
+                <p><strong>Si, duplicamos tus puntos durante todo el invierno. </strong>Aprovecha esta promoción especial hasta el 21 de septiembre. Todos tus puntos se duplican automáticamente al momento de canjearlos.</p>
                 <button type="button" class="btn-close position-absolute end-0 bottom-0" data-bs-dismiss="alert"></button>
             </div>
 
-            
-         </main>
+            <!--Inicio del catalogo-->
+   
+            <div class="container ">
+                <div class="row">
+                    <!-- barra lateral -->
+                    <div class="catlateral col-sm-3 bg-light">
+                        <section class="catbarralateral">
+                            <form class="form">
+                                <div>
+                                <label class="my-1 mr-2" for="categoria">Categoria</label>
+                                <select class="custom-select my-1 mr-sm-2 mb-4" id="categoria">
+                                  <option selected>Todas...</option>
+                                  <option value="1">Regalería</option>
+                                  <option value="2">Belleza</option>
+                                  <option value="3">Electrodomésticos</option>
+                                  <option value="4">Accesorios auto</option>
+                                  <option value="5">Entretenimiento</option>
+                                  <option value="6">Todas...</option>
+                                </select>
+                                </div>
+                                <label class="my-1 mr-2" for="orden">Ordenar por</label>
+                                <div class="catalogolateralcheck form-check">
+                                    <input class="form-check-input" type="radio" name="orden" id="orden1" value="option1" checked>
+                                    <label class="form-check-label" for="orden1">
+                                      Mas relevantes
+                                    </label>
+                                </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="orden" id="orden2" value="option2">
+                                    <label class="form-check-label" for="orden2">
+                                      Menor precio
+                                    </label>
+                                 </div>
+                                 <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="orden" id="orden3" value="option3">
+                                    <label class="form-check-label" for="orden3">
+                                      Alfabetico
+                                    </label>
+                                </div>
 
-         <footer>
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="soloinmediatos">
+                                    <label class="form-check-label" for="soloinmediatos">
+                                      Solo Canje Inmediato
+                                    </label>
+                                </div>
+
+                            </form>
+                        </section>
+                    </div>
+
+                    <!-- w-100 rompe el row (lo encolumna) -
+                         d-md-none lo oculta (no rompe) a partir de tamaño md  -->
+                    <div class="w-100 d-md-none"></div>
+                    <!-- lista de productos  -->
+                    <div class="catcatalogo col-sm-9">
+                        <section class="listacatalogo">
+
+                            <article class="catalogoitem" >
+                                <div class="item_imagencontainer">
+                                    <img class="item_imagen" src="../imgs/rutini.png" alt="">
+                                </div>
+                                <div class="item_descripcion container">               
+                                    <h4>Estuche Vino Rutini Regalo Cabernet Malbec X2</h4>
+                                    <span class="precioanterior">M$ 1350.-</span>
+                                    <div class="row">
+                                        <span class="col-sm-6 precio">M$ 1200.-</span>
+                                        <span class="col-sm-6 canjear">Canjear</span> 
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="catalogoitem" >
+                                <div class="item_imagencontainer">
+                                    <img class="item_imagen" src="../imgs/chocolate.png" alt="">
+                                </div>
+                                <div class="item_descripcion">
+                                    <h4>Ferrero Roche Chocolate X24 </h4>
+                                    <div class="row">
+                                        <span class="col-sm-6 precio">M$ 1800.-</span>
+                                        <span class="col-sm-6 canjear">Canjear</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="catalogoitem" >
+                                <div class="item_imagencontainer">
+                                    <img class="item_imagen" src="../imgs/colgante.png" alt="">
+                                </div>
+                                <div class="item_descripcion">
+                                    <h4>Collar Yin Yang Gatitos</h4>
+                                    <span class="precioanterior">M$ 1050.-</span>
+                                    <div class="row">
+                                        <span class="col-sm-6 precio">M$ 950.-</span>
+                                        <span class="col-sm-6 canjear">Canjear</span>                                    
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="catalogoitem" >
+                                <div class="item_imagencontainer">
+                                    <img class="item_imagen" src="../imgs/mate.png" alt="">
+                                </div>
+                                <div class="item_descripcion">     
+                                    <h4>Mate Pampa Camionero Térmico Pack C/ Bombilla + Regalo</h4>
+                                    <div class="row">
+                                        <span class="col-sm-6 precio">M$ 800.-</span>
+                                        <span class="col-sm-6 canjear">Canjear</span>                                    
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+              
+        </main>
+
+        <footer>
 
             <nav class="navbar navbar-expand-md navbar-light bg-light border-top border-info mt-5" >
                 <div class="container-fluid">

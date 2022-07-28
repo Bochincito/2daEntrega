@@ -18,11 +18,14 @@
 @import "./views/canjear";
 @import "./views/contacto";
 
+/*Mediaqueries */
+@import "./misc/mediaqueries.scss";
+
 
 /* Animación del #offers__tit  */
 
 @keyframes shrink-me {
     0%   {margin: 0 1rem; font-size: 28;}
-    50%  {margin: 0 8rem; font-size: 14;}
+    50%  {margin: 0 4rem; font-size: 14;}
     100% {margin: 0 1rem; font-size: 28;}
 }

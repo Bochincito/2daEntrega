@@ -27,6 +27,9 @@ h1 {
   color: #E63462;
   margin: 2rem 0; }
 
+.nav-item {
+  margin-bottom: 1rem; }
+
 /*  MPARTIALS */
 .nav-item {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -125,12 +128,66 @@ h1 {
     color: #5bc0de; }
 
 .catalogo {
-  width: 400px;
+  width: 300px;
   height: 60px;
   background-color: #C7EFCF;
   border-radius: 5%;
   text-align: center;
   margin: 0.5rem; }
+
+.catlateral {
+  height: 100vh; }
+
+.listacatalogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem; }
+
+.catalogoitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid lightgray; }
+  .catalogoitem .item_imagencontainer {
+    width: 20%; }
+    .catalogoitem .item_imagencontainer .item_imagen {
+      max-width: 100%; }
+  .catalogoitem .item_descripcion {
+    width: 75%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem; }
+    .catalogoitem .item_descripcion h4 {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0; }
+    .catalogoitem .item_descripcion .precioanterior {
+      font-size: 1em;
+      color: gray;
+      text-decoration: line-through; }
+    .catalogoitem .item_descripcion .precio {
+      font-size: 1.5em;
+      margin: 0; }
+    .catalogoitem .item_descripcion .canjear {
+      color: white;
+      text-decoration: double;
+      font-size: 1.5em;
+      font-family: "Verdana, Geneva, Tahoma", sans-serif; }
+      .catalogoitem .item_descripcion .canjear a {
+        text-decoration: none;
+        color: none; }
+
+.catalogoitem:hover {
+  background-color: #dcf2fa; }
+  .catalogoitem:hover .canjear {
+    color: green; }
 
 /* -- Pagina Comercios */
 .comercios .card {
@@ -165,13 +222,24 @@ h1 {
     width: 350px;
     height: 120px; }
 
+/*Mediaqueries */
+@media (max-width: 720px) {
+  .logo {
+    max-width: 200; }
+  .catlateral {
+    height: 100%; }
+  .contacto {
+    width: 300px; }
+    .contacto textarea {
+      width: 260px; } }
+
 /* Animación del #offers__tit  */
 @keyframes shrink-me {
   0% {
     margin: 0 1rem;
     font-size: 28; }
   50% {
-    margin: 0 8rem;
+    margin: 0 4rem;
     font-size: 14; }
   100% {
     margin: 0 1rem;
